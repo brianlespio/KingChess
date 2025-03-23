@@ -1,0 +1,14 @@
+.auth-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.auth-container button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
