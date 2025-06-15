@@ -1,12 +1,38 @@
-# React + Vite
+# KingChess
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación de ejemplo construida con React y Vite para jugar partidas de ajedrez entre dos personas.
 
-Currently, two official plugins are available:
+## Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js 20 o superior.
 
-## Expanding the ESLint configuration
+## Instalación de dependencias
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+```
+
+## Arrancar el cliente
+
+Inicia la versión de desarrollo ejecutando:
+
+```bash
+npm run dev
+```
+
+Esto levanta Vite y sirve el cliente de React en `http://localhost:5173` por defecto.
+
+## Iniciar el servidor
+
+Si el proyecto incluye un servidor de Node, arráncalo con:
+
+```bash
+node server/index.js
+```
+
+## Flujo de lobby y partida
+
+1. Al abrir la aplicación los jugadores acceden a un lobby donde pueden esperar a que otro usuario se conecte.
+2. Una vez hay dos jugadores en el lobby, se crea la partida y ambos clientes cargan el tablero.
+3. Cada movimiento se envía al servidor y éste lo transmite al rival para mantener la partida sincronizada.
+4. Al finalizar la partida (jaque mate, tablas o rendición) los jugadores pueden volver al lobby para iniciar un nuevo juego.
