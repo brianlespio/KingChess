@@ -1,0 +1,19 @@
+.game-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.board {
+  border: 2px solid #333;
+  width: 400px;
+  height: 400px;
+}
+
+.player-info {
+  width: 200px;
+}
+
+.player-info h3 {
+  margin-top: 0;
+}
